@@ -1,0 +1,68 @@
+#phone {
+    width: 100px;
+    height: 175px;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    background-color: #D6E3BC;
+}
+
+#display {
+    top: 10px;
+    left: 6px;
+    width: 85px;
+    height: 85px;
+    font-size: 25px;
+    line-height: 85px;
+    margin: 6px auto 0;
+    border: 1px solid;
+    border-radius: 15px;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.button {
+    width: 15px;
+    height: 13px;
+    border-radius: 45px;
+    border: 1px solid;
+    position: absolute;
+    background-color: #3F3151;
+}
+
+#one {
+    transform: translate(17px, 10px);
+}
+
+#two {
+    transform: translate(42px, 10px);
+}
+
+#three {
+    transform: translate(67px, 10px);
+}
+
+#four {
+    transform: translate(17px, 30px);
+}
+
+#five {
+    transform: translate(42px, 30px);
+}
+
+#six {
+    transform: translate(67px, 30px);
+}
+
+#seven {
+    transform: translate(17px, 50px);
+}
+
+#eight {
+    transform: translate(42px, 50px);
+}
+
+#nine {
+    transform: translate(67px, 50px);
+}

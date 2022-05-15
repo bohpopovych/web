@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Лабораторна, HTML-5, гіпертекстова розмітка, таблиця, CSS-3">
+    <meta name="description" content="Мова гіпертекстової розмітки сайту HTML-5. Таблиці. Каскадна таблиця стилів CSS-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Попович Б. М. - ЗПІ-ЗП01</title>
+    <style>
+        table, th, td {
+            color: #000000;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 600px;
+        }
+
+        td {
+            height: 25px;
+            min-width: 150px;
+        }
+
+        .first {
+            background-color: #668f8f;
+        }
+        .first:hover {
+            background-color: #f5f566;
+        }
+
+        .second {
+            background-color: #f5f566;
+        }
+        .second:hover {
+            background-color: #668f8f;
+        }
+        </style>
+</head>
+<body>
+    <h4>Завдання №1</h4>
+    <table>
+        <tbody>
+            <tr class="first">
+                <td rowspan="2">Попович</td>
+                <td colspan="2">Богдан</td>
+                <td>Миколайович</td>
+                <td></td>
+            </tr>
+            <tr class="second">
+                <td rowspan="2">ЗПІ-ЗП01</td>
+                <td rowspan="2">Лабораторна №2</td>
+                <td rowspan="3">Варіант 6</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td rowspan="2"></td>
+
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Завдання №2</h4>
+    <div id="phone">
+        <div id="display">
+            <span>12:00</span>
+        </div>
+        <div id="one" class="button"></div>
+        <div id="two" class="button"></div>
+        <div id="three" class="button"></div>
+        <div id="four" class="button"></div>
+        <div id="five" class="button"></div>
+        <div id="six" class="button"></div>
+        <div id="seven" class="button"></div>
+        <div id="eight" class="button"></div>
+        <div id="nine" class="button"></div>              
+    </div>
+</body>
+</html>

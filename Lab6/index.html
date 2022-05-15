@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Лабораторна, HTML-5, регулярні вирази">
+    <meta name="description" content="Події. Регулярні вирази.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Попович Б. М. - ЗПІ-ЗП01</title>
+    <style>
+        label {
+            width: 150px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h4>Завдання 1</h4>
+        <div>
+            <label for="">ПІБ:</label>
+            <input type="text" pattern="^[А-Яа-я]*\s[А-Яа-я][.][А-Яа-я][.]$">
+        </div>
+        <div>
+            <label for="">Дата народження:</label>
+            <input type="text" pattern="^\d{2}[.]\d{2}[.]\d{4}$">
+        </div>
+        <div>
+            <label for="">Адреса:</label>
+            <input type="text" pattern="^м. [А-Яа-я]*">
+        </div>
+        <div>
+            <label for="">Емейл:</label>
+            <input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        </div>
+        <div>
+            <label for="">Телеграм:</label>
+            <input type="text" pattern="^@\w{1}_\w*$">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <h4>Завдання 2</h4>
+    <span>Палітра для комірки: </span>
+    <input type="color" id="picker" value="#ff0000" />
+    <br />
+    <br />
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
+        </tr>
+    </table>
+    <script>
+        function firstTask() {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                for(let i = 0; i <= form.elements.length; i++) {
+                    console.log(i);
+                    const input = form.elements[i];
+                    if(input && input.nodeName == 'INPUT') {
+                        const val = input.value;
+                        console.log(val);
+                        const strong = document.createElement('strong');
+                        
+                        strong.innerHTML = val;
+
+                        input.parentElement.appendChild(strong);
+                    }
+                }
+
+                form.reset();
+            }, true);
+        }
+
+        function secondTask() {
+            const picker = document.getElementById('picker');
+            const element = document.querySelector('table tr:first-child td:last-child');
+
+            element.addEventListener('mouseover', e => {
+                e.target.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            })
+
+            element.addEventListener('click', e => {
+                e.target.style.backgroundColor = picker.value;
+            })
+
+            element.addEventListener('dblClick', e => {
+                e.target.style.backgroundColor = picker.value;
+            })
+        }
+
+        firstTask();
+        secondTask();
+    </script>
+</body>
+</html>
